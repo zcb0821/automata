@@ -1,0 +1,28 @@
+<div ng-controller="pdaCtrl">
+    <div class = "row">
+        <div class="col-sm-12" id="pda-input">
+
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-sm-12">
+            <ul class="nav nav-tabs">
+                <li ng-repeat="item in items" ng-class="{active: item.title===activeItem}" ng-click="onNavItemClick(item.title)">
+                    <a href="javascript:void(0);">[[item.title]]</a>
+                </li>
+            </ul>
+            <div id="pda-accept-test" ng-show="activeItem===items.acceptTest.title">
+                <div class="input-group">
+                    <span class="input-group-addon">接受</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">检测</button>
+                    </span>
+                </div>
+            </div>
+            <div id="pda-to-grammar" ng-show="activeItem===items.toGrammar.title">
+
+            </div>
+        </div>
+    </div>
+</div>

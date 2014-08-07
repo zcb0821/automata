@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="automata">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/non-responsive.css">
+    <link rel="stylesheet" href="static/css/fa.css">
+    <link rel="stylesheet" href="static/css/app.css">
+    <title>Automata</title>
+</head>
+<body>
+{% include "nav_bar.html" %}
+<div class="container"><ng-view></ng-view></div>
+
+<script type="text/template" id="fa-template">{% include "draw_template.html" %}</script>
+<script src="static/js/jquery-1.10.2.min.js"></script>
+<script src="static/js/bootstrap.js"></script>
+<script src="static/js/underscore.js"></script>
+<script src="static/js/backbone-min.js"></script>
+<script src="static/js/raphael-min.js"></script>
+<script src="static/js/angular.min.js"></script>
+<script src="static/js/angular-route.min.js"></script>
+<script src="static/js/fa.js"></script>
+<script src="static/js/data.js"></script>
+<script src="static/js/view.js"></script>
+<script src="static/js/app.js"></script>
+</body>
+</html>

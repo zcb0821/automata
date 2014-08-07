@@ -1,0 +1,141 @@
+/*nav*/
+.navbar-brand{
+	margin: 0;
+}
+.nav-tabs{
+    margin-bottom: 20px;
+}
+/*grammar*/
+#grammar-input .panel-heading{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#grammar-input .panel-heading:after{
+    line-height: 34px;
+    content: "";
+}
+
+#grammar-input .panel-body {
+    min-height: 100px;
+}
+
+
+
+/*table-like*/
+.table-like{
+    margin: 5px 0;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
+
+.table-like:after{
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+
+.table-cell{
+    display: block;
+    border-radius: 0;
+    box-sizing: border-box;
+    margin: 0;
+    float:left;
+}
+
+.table-cell.glyphicon{
+    top: 0;
+    left: 0;
+}
+
+.table-cell:first-child{
+    border-radius: 4px 0 0px 4px !important;
+}
+
+.table-cell:last-child{
+    border-radius: 0 4px 4px 0 !important;
+}
+
+.table-cell:not(:first-child){
+    border-left-width: 0px !important;
+}
+
+
+.table-like .tag{
+    height: 34px;
+    padding: 9px 3px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+
+/*percentage*/
+/* percentage */
+.p10{
+    width: 10% !important;
+}
+
+.p20{
+    width: 20% !important;
+}
+
+.p30{
+    width: 30% !important;
+}
+
+.p50{
+    width: 50% !important;
+}
+
+.p60{
+    width: 60% !important;
+}
+
+.p70{
+    width: 70% !important;
+}
+
+.p80{
+    width: 80% !important;
+}
+
+.p100{
+    width: 100% !important;
+}
+
+.p5{
+    width: 5% !important;
+}
+
+.p15{
+    width: 15% !important;
+}
+
+.p25{
+    width: 25% !important;
+}
+
+.p35{
+    width: 35% !important;
+}
+
+.p45{
+    width: 45% !important;
+}
+
+.p55{
+    width: 55% !important;
+}
+
+.p65{
+    width: 65% !important;
+}
+
+.p75{
+    width: 75% !important;
+}
+

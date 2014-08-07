@@ -1,0 +1,62 @@
+<div class = "row">
+    <div class = "col-sm-8">
+        <div class = "fa-paper-wrap"></div>
+    </div>
+    <div class = "col-sm-4">
+        <div class="list-group">
+            <div class="list-group-item active">
+                <label class="p20 pull-left">绘图</label>
+                <div class="btn-group" domain="mode">
+                    <button type="button" class="btn btn-default" val = "0" target = "mode">
+                        <span class="glyphicon glyphicon-ok-circle"></span>
+                    </button>
+                    <button type="button" class="btn btn-default active" val = "1" target = "mode">
+                        <span class="glyphicon glyphicon-record"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" val = "2" target = "mode">
+                        <span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" val = "3" target = "mode">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="list-group-item active" domain="input-char">
+                <label class="p20 pull-left">输入字符</label>
+                <input type="text" class="form-control p75" placeholder="逗号隔开，如a,b,c">
+            </div>
+            <% if (type === "PDA") { %>
+            <div class="list-group-item active"  domain="stack-char">
+                <label class="p20 pull-left">栈符号</label>
+                <input type="text" class="form-control p75" placeholder="逗号隔开，如a,b,c">
+            </div>
+            <% } %>
+            <div class="list-group-item active" domain="name">
+                <label class="p20 pull-left">名称</label>
+                <input type="text" class="form-control p75" placeholder="状态名或转移条件">
+            </div>
+            <div class="list-group-item active" domain="start-final">
+                <label class="p20 pull-left">初态/终态</label>
+                <div class="btn-group" domain="state-type">
+                    <button type="button" class="btn btn-default" val = "start">初态</button>
+                    <button type="button" class="btn btn-default" val = "end">终态</button>
+                </div>
+            </div>
+            <% if (type === "DFA" || type === "NFA") { %>
+            <div class="list-group-item active" domain="type">
+                <label class="p20 pull-left">类型</label>
+                <div class="btn-group" domain="fa-type">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <%= type %> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" target = "type">
+                        <li><a href="javascript:void(0);" val = "DFA">DFA</a></li>
+                        <li><a href="javascript:void(0);" val = "NFA">NFA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+</div>

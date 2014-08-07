@@ -1,0 +1,33 @@
+<div ng-controller="regular">
+    <div id="regular-expression">
+        <div class="input-group">
+            <span class="input-group-addon">正则表达式</span>
+            <input type="text" class="form-control" ng-model="regularExpr">
+        </div>
+    </div>
+
+    <br>
+
+    <ul class="nav nav-tabs">
+        <li ng-repeat="item in items" ng-class="{active: item.title===activeItem}" ng-click="onNavItemClick(item.title)">
+            <a href="javascript:void(0);">[[item.title]]</a>
+        </li>
+        <li>
+            <button class="btn btn-default" ng-if = "activeItem===items.toDFA.title" ng-click="start()">
+                <span class="glyphicon glyphicon-play"></span>
+            </button>
+        </li>
+    </ul>
+
+    <div id="regular-accept-test" ng-show="activeItem===items.accept.title">
+        <div class="input-group">
+            <span class="input-group-addon">[[checkResult]]</span>
+            <input type="text" class="form-control" ng-model="testString">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="check(testString)">检测</button>
+            </span>
+        </div>
+    </div>
+
+    <div id="regular-to-dfa" ng-show="activeItem===items.toDFA.title"></div>
+</div>

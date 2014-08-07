@@ -1,0 +1,56 @@
+<div ng-controller="grammarCtrl">
+    <div class = "row">
+        <div class="col-sm-12" id="grammar-input">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    上下文无关文法
+                    <button class="btn btn-default pull-right" ng-click="add()">添加</button>
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="item in productions" class="table-like p100">
+                        <input type="text" class="form-control table-cell p15" ng-model="item.head">
+                        <span class="glyphicon glyphicon-arrow-right table-cell tag p5"></span>
+                        <input type="text" class="form-control table-cell p75" ng-model="item.body">
+                        <button type="button" class="btn btn-default table-cell p5" aria-hidden="true" ng-click="remove(item)">
+                            &times;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-sm-12">
+            <ul class="nav nav-tabs">
+                <li ng-repeat="item in items" ng-class="{active: item.title===activeItem}" ng-click="onNavItemClick(item.title)">
+                    <a href="javascript:void(0);">[[item.title]]</a>
+                </li>
+            </ul>
+
+            <div id="grammar-accept-test" ng-show="activeItem===items.grammarAcceptTest.title">
+                <div class="input-group">
+                    <span class="input-group-addon">[[check_status]]</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">检测</button>
+                    </span>
+                </div>
+            </div>
+
+            <div id="grammar-simplify" ng-show="activeItem===items.grammarSimplify.title">
+                <div ng-repeat="item in s_productions" class="table-like p100">
+                    <input type="text" class="form-control table-cell p15" ng-model="item.head">
+                    <span class="glyphicon glyphicon-arrow-right table-cell tag p5"></span>
+                    <input type="text" class="form-control table-cell p75" ng-model="item.body">
+                    <button type="button" class="btn btn-default table-cell p5" aria-hidden="true" ng-click="remove(item)">
+                        &times;
+                    </button>
+                </div>
+            </div>
+
+            <div id="grammar-to-pda" ng-show="activeItem===items.grammarToPDA.title">
+
+            </div>
+        </div>
+    </div>
+</div>

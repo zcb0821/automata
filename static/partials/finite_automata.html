@@ -1,0 +1,49 @@
+<div ng-controller="finiteAutomataCtrl">
+    <div class="row">
+        <div class = "col-sm-12" id="fa-input"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class = "col-sm-12">
+        <ul class="nav nav-tabs">
+            <li ng-repeat="item in items" ng-class="{active: item.title===activeItem}" ng-click="onNavItemClick(item.title)">
+                <a href="javascript:void(0);">[[item.title]]</a>
+            </li>
+            <li>
+                <button class="btn btn-default" ng-if = "activeItem===items.minimize.title || activeItem===items.NFAtoDFA.title"
+                        ng-click="start()">
+                    <span class="glyphicon glyphicon-play"></span>
+                </button>
+            </li>
+        </ul>
+
+        <div id="regular-accept-test" ng-show="activeItem===items.accept.title">
+            <div class="input-group">
+                <span class="input-group-addon">接受</span>
+                <input type="text" class="form-control" ng-model="inputString">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="check(inputtring)">检测</button>
+                </span>
+            </div>
+        </div>
+
+        <div ng-show="activeItem===items.minimize.title">
+            <div id="minimize-dfa" ></div>
+        </div>
+
+        <div ng-show="activeItem===items.NFAtoDFA.title">
+            <div id="nfa-to-dfa" ></div>
+        </div>
+
+        <div id="convert-to-regular" ng-show="activeItem===items.toRegular.title">
+            <div class="input-group">
+                <span class="input-group-addon">正则表达式</span>
+                <input type="text" class="form-control" ng-model="regularExpression">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="convertToRegular()">转换</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
